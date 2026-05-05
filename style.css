@@ -10,9 +10,6 @@ header{
     width: 100%;
     height: 80px;
     z-index: 1000;
-    /* background: rgba(0, 0, 0, 0.95);  make it solid */
-    /* backdrop-filter: blur(10px);
-    overflow: hidden; */
 }
 
 /* Brand */
@@ -203,6 +200,152 @@ body {
     border-radius: 25px;
 }
 
+/* About Us Section */
+
+
+.about-container {
+    font-weight: 700;
+    background-color: grey;
+    color: #000000;
+    margin-top: 100px;
+    padding: 20px 40px;
+    font-size: 30px;
+    text-align: center;
+}
+.about p{
+    text-align:justify;
+}
+
+/* Results Section */
+.results-section {
+    background-color: grey;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.results-section h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #000;
+    font-weight:700;
+}
+
+.results-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.results-boxes > div {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+}
+
+.results-boxes h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffd700;
+    margin: 0 0 10px;
+}
+
+.results-boxes p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Scrolling Clients Section */
+.clients-scroll-section {
+    margin-top: 50px;
+}
+
+.clients-scroll-section h3 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-bar {
+    display: flex;
+    height: 80px;
+    gap: 12px;
+    width: max-content;
+    animation: scroll 26s linear infinite;
+    padding: 10px 0;
+    will-change: transform;
+}
+
+.reverse .scroll-bar {
+    animation: scrollReverse 26s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 6px));
+    }
+}
+
+@keyframes scrollReverse {
+    0% {
+        transform: translateX(calc(-50% - 6px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scroll-bar span {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    display: flex;
+    flex: 0 0 145px;
+    justify-content: center;
+    line-height: 1.25;
+    padding: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .results-boxes {
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .results-boxes > div {
+        padding: 30px 40px;
+    }
+    
+    .scroll-bar span {
+        font-size: 14px;
+        flex-basis: 118px;
+        padding: 12px;
+    }
+}
+
+
+
 /* Services */
 
 .services{
@@ -233,29 +376,30 @@ body {
 
 .services-title {
     position:sticky;
+    top:22%;
+    left:10%;
+
+    width: 60%;
     color: #ffd700;
     text-align: center;
-    top: 150px;
-    width: 60%;
-    font-size:25px;
+    font-size:23px;
     align-self: flex-start;
 }
 
 .services-title h3 {
-    margin-left: 60px;
-    text-align: left;
-    width: 100%;
+    text-align: justify;
 }
 
 .services-title h1 {
-    display: inline-block;
-    /* line-height: 1px; */
+    text-align: justify;
 }
 
 .logo2{
-    vertical-align: middle;
-    height: 120px;
-
+    position: absolute;
+    height: 1200px;
+    opacity: 0.04;
+    right: -260px;
+    top: -350px;
 }
 /* Services hover effect */
 
@@ -285,6 +429,45 @@ body {
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); /* golden glow */
     color: black;
 }
+
+/* Footer section */
+
+.footer{
+    font-size: 20px;
+    background-color: #666;
+    padding: 100px 100px 20px 100px;
+
+}
+.footer-logo{
+    height: 80px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly ;
+    gap:200px;
+    align-items: center;
+}
+.footer-container a{
+    display: block;
+    flex-direction: column;
+    color: #ddd;
+    text-decoration: none;
+}
+hr{
+    width: 70%;
+    height: 2px;
+    background-color: #ffffff;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.line{
+    display: flex;
+    justify-content: space-evenly;
+    gap:280px
+}
+
+
 
 /*Animations*/
 
