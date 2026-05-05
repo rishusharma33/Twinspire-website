@@ -10,3 +10,7 @@ toggle.addEventListener('click', () => {
         toggle.textContent = "☰";  // menu
     }
 });
+
+document.querySelectorAll('.scroll-bar').forEach((bar) => {
+    bar.innerHTML += bar.innerHTML;
+});
